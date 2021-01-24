@@ -24,15 +24,17 @@ public class NameInverter {
 
         public static String createInvertedString(ArrayList<String> splitName) {
             splitName.removeIf(n -> List.of("Pan", "Pani").contains(n));
-            ArrayList<String> reverted = Lists.newArrayList
-                    (splitName.stream().collect(Collectors.toCollection(LinkedList::new))
-                            .descendingIterator());
-
-            return String.join(",", reverted);
+            return String.join(",", revertList(splitName));
         }
 
         public static boolean isEmptyOrSpaces(String name) {
             return name.trim().isEmpty();
         }
+    }
+
+    private static ArrayList<String> revertList(ArrayList<String> splitName) {
+        return Lists.newArrayList
+                (splitName.stream().collect(Collectors.toCollection(LinkedList::new))
+                        .descendingIterator());
     }
 }
