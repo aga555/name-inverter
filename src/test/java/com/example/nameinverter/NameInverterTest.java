@@ -44,7 +44,7 @@ class NameInverterTest {
     }
 
     @Test
-    void shouldRemoveHonorificsReturnInvertedFirstAndLastName() {
+    void shouldRemoveHonorificsReturnInvertedFirstAndLastNameMale() {
         //given
         String inverted = nameInverter.invert("Pan Gracjan Kowalski");
         //when
