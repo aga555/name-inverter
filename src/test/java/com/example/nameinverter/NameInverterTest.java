@@ -48,7 +48,7 @@ class NameInverterTest {
         //given
         String inverted = nameInverter.invert("Pan Gracjan Kowalski");
         //when
-        assertThat(inverted).isEqualTo("Gracjan,Jan");
+        assertThat(inverted).isEqualTo("Kowalski,Gracjan");
         //then
     }
 }

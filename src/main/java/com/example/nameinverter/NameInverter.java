@@ -1,17 +1,17 @@
 package com.example.nameinverter;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NameInverter {
     public String invert(String name) {
         if (StringHelper.isEmptyOrSpaces(name)) {
             return "";
         }
-
-        String[] splitName = name.split(" ");
-        return String.format("%s,%s", splitName[1], splitName[0]);
-
+        ArrayList<String> splitName = new ArrayList<>(List.of(name.split(" ")));
+        return StringHelper.createInvertedString(splitName);
     }
+
 
     static class StringHelper {
 
