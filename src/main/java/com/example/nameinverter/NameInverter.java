@@ -19,7 +19,7 @@ public class NameInverter {
     static class StringHelper {
 
         public static String createInvertedString(ArrayList<String> splitName) {
-
+            splitName.removeIf("Pani"::equals);
             splitName.removeIf("Pan"::equals);
             return String.format("%s,%s", splitName.get(1), splitName.get(0));
         }
