@@ -7,10 +7,9 @@ public class NameInverter {
         if (StringHelper.isEmptyOrSpaces(name)) {
             return "";
         }
-        ArrayList<String[]> splitNameList = new ArrayList<>();
-        splitNameList.add(name.split(" "));
 
-        return null;
+        String[] splitName = name.split(" ");
+        return String.format("%s,%s", splitName[1], splitName[0]);
 
     }
 
