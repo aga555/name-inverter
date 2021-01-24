@@ -8,10 +8,13 @@ public class NameInverter {
         if (StringHelper.isEmptyOrSpaces(name)) {
             return "";
         }
-        ArrayList<String> splitName = new ArrayList<>(List.of(name.split(" ")));
+        ArrayList<String> splitName = splitName(name);
         return StringHelper.createInvertedString(splitName);
     }
 
+    private ArrayList<String> splitName(String name) {
+        return new ArrayList<>(List.of(name.split(" ")));
+    }
 
     static class StringHelper {
 
